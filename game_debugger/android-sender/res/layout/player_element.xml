@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Copyright 2015 Google Inc. All Rights Reserved.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/player_element_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <!-- Player id -->
+        <TextView
+            android:id="@+id/player_id_label"
+            style="@style/label"
+            android:paddingTop="0dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/player_id_label" />
+        <TextView
+            android:id="@+id/player_id"
+            style="@style/label_value"
+            android:paddingBottom="@dimen/debugger_fragment_label_vertical_spacing"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/players_label" />
+        <View
+            android:paddingBottom="@dimen/debugger_fragment_label_vertical_spacing"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/white" />
+
+
+        <!-- Player state -->
+        <TextView
+            android:id="@+id/player_state_label"
+            style="@style/label_small"
+            android:paddingTop="@dimen/debugger_fragment_label_vertical_spacing"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/player_state_label" />
+        <TextView
+            android:id="@+id/player_state"
+            style="@style/label_value"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"/>
+
+        <!-- Player data -->
+        <TextView
+            android:id="@+id/player_data_label"
+            style="@style/label_small"
+            android:paddingTop="@dimen/debugger_fragment_label_vertical_spacing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/player_data_label" />
+        <TextView
+            android:id="@+id/player_data"
+            style="@style/label_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/white" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/button_player_transition"
+                style="@style/card_button"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/button_player_transition" />
+            <Button
+                android:id="@+id/button_send_game_message"
+                style="@style/card_button"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/button_send_game_message" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/player_not_controllable_indicator"
+            style="@style/label_value"
+            android:text="@string/player_not_controllable_indicator"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/debugger_fragment_label_vertical_spacing"
+            android:paddingBottom="@dimen/debugger_fragment_label_vertical_spacing"/>
+        <TextView
+            android:id="@+id/game_full_indicator"
+            style="@style/label_value"
+            android:text="@string/game_full_indicator"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/debugger_fragment_label_vertical_spacing"
+            android:paddingBottom="@dimen/debugger_fragment_label_vertical_spacing"/>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

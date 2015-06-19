@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<!--
+Copyright 2015 Google Inc. All Rights Reserved.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+    <title>Spritedemo sender</title>
+    <style>
+      body {
+        background: #A7D6B5;
+        box-shadow: 0 0 0.5em #999;
+        color: #333;
+        margin: 0px;
+        padding: 1em;
+        text-align: center;
+      }
+
+      .title {
+        background: #77A8D9;
+        box-shadow: 0 0 0.5em #999;
+        color: #333;
+        padding: 1em;
+        text-align: center;
+      }
+
+      .button {
+        background: #77A8D9;
+        border-radius: 50px;
+        box-shadow: 0 0 0.5em #999;
+        color: #333;
+        font-family: Helvetica;
+        font-size: 200%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 1em;
+        text-align: center;
+        width: 40%;
+      }
+
+      .button:hover{
+        background-color: #88B9EA
+      }
+
+      .button:active{
+        background-color: #5586B7
+      }
+
+      .noselect {
+        user-select: none;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+      }
+
+      .instruction-panel {
+        background: #FFF;
+        border-radius: 10px;
+        box-shadow: 0 0 0.5em #999;
+        font-family: Arial;
+        line-height: 140%;
+        margin: 20px;
+        padding: 10px;
+        padding-left: 25px;
+        padding-right: 25px;
+        text-align: left;
+      }
+
+      .code-key {
+        background-color:#EEE;
+        border-radius:3px;
+        border: solid gray 2px;
+        box-shadow: 0 0 0.2em #999;
+        color: #333;
+        font-family: Monospace;
+        padding-left:5px;
+        padding-right:5px;
+        text-shadow:none;
+        font-size:100%;
+      }
+
+      .instruction-panel .code {
+        background-color:#EEE;
+        border-radius: 3px;
+        box-shadow: 0 0 0.2em #999;
+        font-family: Monospace;
+        margin-left: 5px;
+        margin-right: 5px;
+        padding: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="title">Sprite demo chrome sender.</h1>
+    <div>
+      <div class="instruction-panel">
+        <h4>Instructions:</h4>
+        <li>Make sure you have the Google cast extension installed.</li>
+        <li>Cast this tab to the Cast device.</li>
+        <li>When the app is loaded on the TV, press the big blue button!</li>
+      </div>
+
+      <div class='button noselect' onclick='sendSpritedemoMessage()'>
+        Click here to send a game message to the receiver
+      </div>
+    </div>
+    <div class="instruction-panel">
+      <h4>So... What's happenning here?</h4>
+      <p>
+        This is an example of a basic cast sender that sends messages
+        to the receiver by using the <span class="code">sendGameMessage(...)
+        </span>function provided by <span class="code">
+        chrome.cast.games.GameManagerClient</span> in the Game Manager APIs.
+      </p>
+
+      <p>
+        The <span class="code">sendGameMessage(...)</span> function
+        can be used to send customized messages to the receiver.  For example,
+        in your own game, you may want to make your character "jump". You can
+        do this by <span class="code">sendGameMessage({action : 'jump'})</span>.
+      </p>
+      <p>
+        In this game we initialized our player with: <span class="code">
+        sendPlayerAvailableRequest(...)</span> instead of <span class="code">
+        sendPlayerAvailableRequestWithPlayerId(...)</span>. When a custom
+        playerId is not provided, the receiver will automatically assign a
+        unique playerId to our sender. This means we can use the function
+        <span class="code">sendGameMessage(...)</span> instead of
+        <span class="code">sendGameMessageWithPlayerId(...)</span>just fine.
+      </p>
+      <p>
+        In a game that supports multiple players on a single sender device,
+        you may need to send messages to the receiver with regard to
+        specific players. To see how you can create a game with custom playerIds
+        and send player specific messages, check out the sample app StarCast!
+      </p>
+
+      <p>
+        By opening the chrome dev console (You can do so by pressing the
+        <span class="code-key">F12</span> key on a PC and
+        <span class="code-key">Cmd</span> + <span class="code-key">Opt</span>
+        + <span class="code-key">I</span>
+        on a Mac.) you can take a look some of the other available commands
+        provided by the Game Manager API.
+      </p>
+    </div>
+
+    <!-- Load all of our scripts -->
+    <script src="script_loader.js"></script>
+  </body>
+</html>

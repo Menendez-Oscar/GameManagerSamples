@@ -1,0 +1,75 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/dialog"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Transition player to -->
+        <LinearLayout
+            android:id="@+id/transition_player_state_section"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                style="@style/label_dialog"
+                android:text="@string/transition_player_to_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <!-- Target player state -->
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/radio_player_states"
+                android:clickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            </RadioGroup>
+        </LinearLayout>
+
+
+        <!-- Extra message data -->
+        <TextView
+            android:id="@+id/extra_message_data_label"
+            style="@style/label_dialog"
+            android:text="@string/extra_message_data_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/extra_message_data"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textMultiLine"
+            android:gravity="top|left"
+            android:minLines="1"
+            android:lines="8"
+            android:scrollbars="vertical"
+            android:imeOptions="actionDone"/>
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:gravity="bottom|right">
+
+            <Button
+                android:id="@+id/button_cancel"
+                android:text="@string/cancel"
+                android:layout_weight="1"
+                style="@style/dialog_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dip"/>
+
+            <Button
+                android:id="@+id/button_ok"
+                android:text="@string/transition_player_ok"
+                android:layout_weight="1"
+                style="@style/dialog_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dip"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

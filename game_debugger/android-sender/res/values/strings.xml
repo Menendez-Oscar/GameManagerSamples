@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Copyright 2015 Google Inc. All Rights Reserved.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+<resources>
+
+    <string name="app_name">Cast Game Debugger</string>
+    <string name="media_route_menu_title">Play on&#8230;</string>
+
+    <!-- Receiver state information -->
+    <string name="application_name_label">Application name</string>
+    <string name="max_players_label">Max players</string>
+    <string name="gameplay_state_label">Gameplay State</string>
+    <string name="lobby_state_label">Lobby State</string>
+    <string name="players_label">Players</string>
+    <string name="player_state_label">Player State</string>
+    <string name="game_status_text_label">Game Status Text</string>
+    <string name="game_data_label">Game data</string>
+    <string name="player_id_label">Player id</string>
+    <string name="player_data_label">Player data</string>
+    <string name="last_game_message_label">Last received game message</string>
+
+    <string name="app_id_label">Cast App Id</string>
+
+    <!-- UI -->
+    <string name="button_add_player">Add player</string>
+    <string name="button_player_transition">Transition player</string>
+    <string name="button_send_game_message">Send game message</string>
+    <string name="button_disconnect">Stop receiver application</string>
+    <string name="error_dialog_title_add_player">Error Adding Player</string>
+    <string name="error_not_valid_json">Not valid JSON</string>
+    <string name="unknown_label">Unknown</string>
+    <string name="transition_player_ok">Transition player</string>
+    <string name="cancel">Cancel</string>
+    <string name="transition_player_to_label">Transition to</string>
+    <string name="game_message_label">Game message</string>
+    <string name="extra_message_data_label">Extra message data</string>
+    <string name="player_not_controllable_indicator">Player not controllable</string>
+    <string name="game_full_indicator">The game is full, can\'t transition this player</string>
+
+    <!-- Gameplay state names -->
+    <string name="gameplay_state_unknown">Unknown</string>
+    <string name="gameplay_state_running">Running</string>
+    <string name="gameplay_state_loading">Loading</string>
+    <string name="gameplay_state_paused">Paused</string>
+    <string name="gameplay_state_showing_info_screen">Showing info screen</string>
+
+    <!-- Lobby state names -->
+    <string name="lobby_state_unknown">Unknown</string>
+    <string name="lobby_state_open">Open</string>
+    <string name="lobby_state_closed">Closed</string>
+
+    <!-- Player state names -->
+    <string name="player_state_unknown">Unknown</string>
+    <string name="player_state_available">Available</string>
+    <string name="player_state_ready">Ready</string>
+    <string name="player_state_idle">Idle</string>
+    <string name="player_state_playing">Playing</string>
+    <string name="player_state_quit">Quit</string>
+    <string name="player_state_dropped">Dropped</string>
+
+</resources>

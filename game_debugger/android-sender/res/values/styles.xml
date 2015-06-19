@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Copyright 2015 Google Inc. All Rights Reserved.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+<resources
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- The theme applied to the application or activity -->
+    <style name="game_debugger_theme"
+           parent="@style/Theme.AppCompat.Light">
+        <item name="android:actionBarStyle">@style/game_debugger_action_bar</item>
+        <item name="actionBarStyle">@style/game_debugger_action_bar</item>
+        <item name="android:actionMenuTextColor">@android:color/white</item>
+        <item name="actionMenuTextColor">@android:color/white</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorPrimaryDark">@color/color_primary_dark</item>
+        <item name="colorAccent">@color/color_accent</item>
+        <item name="isLightTheme">true</item>
+    </style>
+
+    <!-- ActionBar -->
+    <style name="game_debugger_action_bar"
+           parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@color/actionbar_background</item>
+        <item name="background">@color/actionbar_background</item>
+        <item name="android:titleTextStyle">@style/game_debugger_action_bar_title_text</item>
+        <item name="titleTextStyle">@style/game_debugger_action_bar_title_text</item>
+    </style>
+
+    <!-- ActionBar title text -->
+    <style name="game_debugger_action_bar_title_text"
+           parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="label">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:paddingTop">10dp</item>
+    </style>
+
+    <style name="label_small">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="label_dialog">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="label_value">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="label_dialog_value">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="card" parent="CardView">
+        <item name="cardBackgroundColor">@color/card_background</item>
+        <item name="cardElevation">4dp</item>
+        <item name="contentPadding">15dp</item>
+        <item name="cardUseCompatPadding">true</item>
+    </style>
+
+    <style name="card_element">
+        <item name="android:padding">5dp</item>
+    </style>
+
+    <style name="player_element_card" parent="CardView">
+        <item name="cardBackgroundColor">@color/player_element_background</item>
+        <item name="cardElevation">4dp</item>
+        <item name="contentPadding">10dp</item>
+        <item name="cardUseCompatPadding">true</item>
+        <item name="android:layout_marginStart">4sp</item>
+    </style>
+
+     <style name="button">
+         <item name="android:background">?android:attr/selectableItemBackground</item>
+         <item name="android:textAllCaps">true</item>
+         <item name="android:textStyle">bold</item>
+         <item name="android:textColor">@color/color_accent</item>
+         <item name="android:padding">15dp</item>
+         <item name="android:layout_margin">10dp</item>
+         <item name="android:layout_gravity">right</item>
+    </style>
+
+    <style name="card_button">
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="dialog_button">
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/color_accent</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="radio_button">
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="dialog">
+        <item name="android:padding">15sp</item>
+        <item name="android:textColor">@color/color_primary</item>
+    </style>
+
+    <color name="color_primary">#00695C</color>
+    <color name="color_accent">#00695C</color>
+    <color name="color_primary_dark">#004D40</color>
+    <color name="actionbar_background">#009688</color>
+    <color name="dialog_background">#E0F2F1</color>
+    <color name="screen_background">#00695C</color>
+    <color name="card_background">#00796B</color>
+    <color name="player_element_background">#00796B</color>
+    <color name="action_bar_background">#009688</color>
+    <color name="button_background">#00796B</color>
+</resources>
