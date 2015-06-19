@@ -39,7 +39,7 @@ Review the [Google Cast SDK Get Started Guide](https://developers.google.com/cas
 
 * Check out code from GitHub and go to a sample subfolder under `android-sender` with a `build.gradle` file.
 * In Android Studio, select `Open Existing Android Studio Project` and select the `build.gradle` file.
-* Accept the default settings.
+* You may need to provide the path to your local gradle installation. You can select the gradle binary inside your Android Studio installation directory.
 * You can now run the app normally from within Android Studio, or use `gradlew build` from the command line.
 
 If you prefer to use your local gradle installation to generate the gradle wrapper, type`gradle wrapper` from the project directory.
